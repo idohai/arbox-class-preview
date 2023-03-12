@@ -1,20 +1,24 @@
-import styles from './DHeader.module.css'
-import editIcon from '../../../assests/Icons/EditIcon'
-import Button from './Button/Button'
+import HButton from './HButton/HButton'
+import EditIcon from '../../../assests/Icons/EditIcon'
+import CancelIcon from '../../../assests/Icons/CancelIcon'
+
+
 
 const DrawerHeader = () => {
     
     return(
         <>
-            <Button
-                className='edit' 
-                text='edit'
-                icon={editIcon}
+            <HButton
+            startIcon={<EditIcon/>}
+            text='edit'
             />
-            <Button
-                className='cancel'
-                text='cancel class'
-            />
+
+            <HButton
+            startIcon={<CancelIcon/>}
+            text='cancel class'
+            >
+            </HButton>
+
         </>
     );
 }
