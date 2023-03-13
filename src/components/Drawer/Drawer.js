@@ -1,5 +1,6 @@
 import classes from './Drawer.module.css';
-import DrawerHeader from './Header/DrawerHeader';
+import DrawerHeader from './DrawerHeader/DrawerHeader';
+import DrawerInfo from './DrawerInfo/DrawerInfo';
 
 const Drawer = (props) => {
  
@@ -10,6 +11,9 @@ const Drawer = (props) => {
                 <div className={classes.content}>
                     <div className={classes.header}>
                         <DrawerHeader />
+                    </div>
+                    <div className={classes.info}>
+                        <DrawerInfo />
                     </div>
                 </div>
             </div>

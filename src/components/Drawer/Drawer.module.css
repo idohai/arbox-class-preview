@@ -27,11 +27,20 @@
     
 }
 
-.drawer .header {
+.drawer .content .header {
+    display: flex;
+    flex-direction: column;
     position: relative;
+    height: 28%;
     width: 100%;
-    height: 6.9%;
-    padding: 3%;
+    border-bottom: solid #F3F3F3;
+}
+
+.drawer .content .info {
+    position: relative;
+    height: 15.5%;
+    width: 100%;
+    border-bottom: solid #F3F3F3;
 
 }
 
