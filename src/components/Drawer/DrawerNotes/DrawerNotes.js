@@ -1,15 +1,16 @@
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container'
 const DrawerNotes = (props) => {
 
     return (
-        <>
-            <Typography variant='h4' textTransform='capitalize'>
+        <Container>
+            <Typography variant='subtitle1'>
                 {props.title}
             </Typography>
-            <Typography variant='h6'>
+            <Typography variant='subtitle2'>
                 {props.description}
             </Typography>
-        </>
+        </Container>
     );
 }
 

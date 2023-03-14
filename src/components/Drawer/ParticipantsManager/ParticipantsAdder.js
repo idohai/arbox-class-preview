@@ -6,31 +6,14 @@ import Select from '@mui/material/Select'
 import InputLabel from '@mui/material/InputLabel'
 import FormControl from '@mui/material/FormControl'
 import MenuItem from '@mui/material/MenuItem'
+
 import SingleParticipant from './SingleParticipant';
 import PlusIcon from '../../../assests/Icons/PlusIcon';
+
 const ParticipantsAdder = (props) => {
 
-    const { data, addParticipantHandler, } = props
+    const { data, addParticipantHandler, } = props;
     const [selectOpen, setSelectOpen] = useState(false);
-
-    // const [selectStyle, setSelectStyle] = useState({style: {
-    //     color: 'green',
-    //     textDecoration: 'underline',
-    //     border: 'green',
-    //     border: '0px',
-    //     textDecoration: 'underline'
-
-    // }});
-
-
-
-    // const selectSx = {
-    //     "&:hover": {
-    //         "&&fieldset": {
-    //             border: "3px solid green"
-    //         }
-    //     }
-    // }
 
 
     const handleSelectOpen = () => {
@@ -49,14 +32,14 @@ const ParticipantsAdder = (props) => {
     )
 
     return (
-        <Grid container columns={12} style={{justifyContent: 'space-between'}}>
-            <Grid item sm={4} md={4}>
-                <Typography variant='h5' textTransform='capitalize'>
+        <Grid container columns={12} style={{display: 'flex', justifyContent: 'space-between', alignContent: 'center'}}>
+            <Grid item sm={4} md={4} style={{display: 'flex', alignItems: 'center'}}>
+                <Typography variant='subtitle1'>
                     participants
                 </Typography>
             </Grid>
             <Grid item sm={8} md={8}>
-                <FormControl fullWidth>
+                <FormControl fullWidth color='button' >
                     <InputLabel shrink={false} id='participants-selector-label'>{selectOpen ? 'To' : 'Add client'}</InputLabel>
                         <Select
                         value=''
@@ -66,11 +49,7 @@ const ParticipantsAdder = (props) => {
                         onOpen={handleSelectOpen}
                         onClose={handleSelectClose}
                         IconComponent={PlusIcon}
-                        // SelectDisplayProps={{ style: { borderColor: 'green', paddingBottom: 8 } }}
-                        // sx={selectSx}
-                        // inputProps={{selectSx}}
-                        >           
-                            {menuItems}
+                            >{menuItems}
                         </Select>
                 </FormControl>
             </Grid>

@@ -2,27 +2,25 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton'
 import Grid from '@mui/material/Grid';
-import TrashIcon from '../../../assests/Icons/TrashIcon';
-import WhatsappIcon from '../../../assests/Icons/WhatsappIcon';
+import TrashIcon from '../../../../assests/Icons/TrashIcon';
+import WhatsappIcon from '../../../../assests/Icons/WhatsappIcon';
+
 const ActionButtons = (props) => {
     
-    const { removeParticipantHandler } = props
+    const { removeParticipantHandler } = props;
     const [isChecked, setIsChecked] = useState(false);
 
-    const containerSx = {display: 'flex', justifyContent: 'space-between', alignContent: 'center'}
-    
+    const containerSx = {display: 'flex', justifyContent: 'space-between', alignContent: 'center'};
 
     const buttonHandler = () => {
         setIsChecked(!isChecked);
     };
 
     return (
-        <Grid container  justifyContent='space-between' alignItems='center'>
+        <Grid container  sx={containerSx}>
             <Grid item sm={6}>
-                <Button
-                color='button' fullWidth='true'
+                <Button color='button' fullWidth
                     variant = {isChecked ? 'outlined' : 'contained'}
-                    
                     onClick={(e) => buttonHandler(e)}>
                         {isChecked ? 'Checked' : 'Check in'}
                 </Button>

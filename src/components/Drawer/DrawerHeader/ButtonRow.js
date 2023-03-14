@@ -1,23 +1,27 @@
 import Button from '@mui/material/Button'
 import EditIcon from '../../../assests/Icons/EditIcon'
 import CancelIcon from '../../../assests/Icons/CancelIcon'
+import { Typography } from '@mui/material'
 
 const ButtonRow = () => {
 
     const buttonStyle = {
-        marginLeft: '1.6%',
-        marginRight: '0.6%',
-        textTransform: 'capitalize',
+        // marginLeft: '1.6%',
+        marginRight: '4%',
     }
     
     return(
         <>
             <Button style={buttonStyle} variant="text" startIcon={<EditIcon/>}>
-                edit
+                <Typography variant='h3'>
+                    edit
+                </Typography>
             </Button>
 
             <Button style={buttonStyle} variant="text" startIcon={<CancelIcon/>}>
-                cancel class
+                <Typography variant='h3'>
+                    cancel class
+                </Typography>
             </Button>
 
         </>

@@ -1,9 +1,10 @@
-import classes from './classes.module.css'
-import InfoItem from './InfoItem'
+import classes from './classes.module.css';
+import InfoItem from './InfoItem';
 
-import TrainerIcon from '../../../assests/Icons/TrainerIcon'
-import ClockIcon from '../../../assests/Icons/ClockIcon'
-import ParticipantsIcon from '../../../assests/Icons/ParticipantsIcon'
+import TrainerIcon from '../../../assests/Icons/TrainerIcon';
+import ClockIcon from '../../../assests/Icons/ClockIcon';
+import ParticipantsIcon from '../../../assests/Icons/ParticipantsIcon';
+
 const DrawerInfo = () => {
     return (
         <div className={classes.container}>

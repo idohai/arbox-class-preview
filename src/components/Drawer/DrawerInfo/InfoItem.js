@@ -1,5 +1,6 @@
-import classes from './classes.module.css'
-import Typography from '@mui/material/Typography'
+import classes from './classes.module.css';
+import Typography from '@mui/material/Typography';
+
 const InfoItem = (props) => {
     return (
         <>
@@ -7,12 +8,12 @@ const InfoItem = (props) => {
                 {props.icon}
             </div>
             <div className={classes.title}>
-                <Typography variant="h4" textTransform='capitalize'>
+                <Typography variant="h2">
                         {props.title}
                 </Typography>
             </div>
             <div className={classes.description}>
-                <Typography variant="h6" textTransform='capitalize'>
+                <Typography variant="h4">
                         {props.description}
                 </Typography>
             </div>
