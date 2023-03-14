@@ -12,13 +12,12 @@ const ButtonRow = () => {
     
     return(
         <>
-            <Button style={buttonStyle} variant="text"
-            startIcon={<EditIcon/>}
-            >edit</Button>
+            <Button style={buttonStyle} variant="text" startIcon={<EditIcon/>}>
+                edit
+            </Button>
 
-            <Button style={buttonStyle} variant="text"
-            startIcon={<CancelIcon/>}
-            >cancel class
+            <Button style={buttonStyle} variant="text" startIcon={<CancelIcon/>}>
+                cancel class
             </Button>
 
         </>

@@ -1,24 +1,28 @@
 import { useRef, useEffect, useState } from 'react';
 import Drawer from '../components/Drawer/Drawer'
-
+import classes from './Dashboard.module.css'
 const Dashboard = () => {
     
-    const drawerRef = useRef();
-    const [isOpen, setIsOpen] = useState(false);
+    const dashboardRef = useRef();
+    const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
     useEffect(() => {
-        window.onclick = (e) => {
-            if (e.target.contains(drawerRef.current)) {
-                setIsOpen(!isOpen);
+        const handleClick = (e) => {
+            if (dashboardRef.current.contains(e.target)){
+                setDrawerIsOpen(!drawerIsOpen);
             }
-        }
-    },[isOpen]);
+        };
+        window.addEventListener('click', handleClick);
+        return () => window.removeEventListener('click', handleClick);
+    },[drawerIsOpen]);
 
     return (
         <div>
-            {/* <div style={{display: 'flex', justifyContent: 'left', alignContent: 'left'}}> */}
-            <div ref={drawerRef}>
-                <Drawer isOpen={isOpen}>
+            <div ref={dashboardRef}
+            className={`${classes.backdrop} ${drawerIsOpen ? classes.open : classes.close}`}>
+            </div>
+            <div className={`${classes.drawer} ${!drawerIsOpen ? classes.close : classes.open }`}>
+                <Drawer drawerIsOpen={true}>
                 </Drawer>
             </div>
         </div>                 

@@ -11,7 +11,7 @@ const DrawerHeader = () => {
             </div>
             <div className={classes.header}>
                 <WorkoutIcon />
-                <Typography variant="h6">
+                <Typography variant="h4">
                     Workout of the day
                 </Typography>
                 

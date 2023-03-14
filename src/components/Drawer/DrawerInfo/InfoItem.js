@@ -7,12 +7,12 @@ const InfoItem = (props) => {
                 {props.icon}
             </div>
             <div className={classes.title}>
-                <Typography variant="h5">
+                <Typography variant="h4" textTransform='capitalize'>
                         {props.title}
                 </Typography>
             </div>
             <div className={classes.description}>
-                <Typography variant="h6">
+                <Typography variant="h6" textTransform='capitalize'>
                         {props.description}
                 </Typography>
             </div>
